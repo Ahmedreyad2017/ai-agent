@@ -10,3 +10,5 @@ export const WEBHOOK_SIGNING_SECRET = process.env.WEBHOOK_SIGNING_SECRET;
 export const REDIS_HOST = process.env.REDIS_HOST;
 export const REDIS_PORT = parseInt(process.env.REDIS_PORT||"6379",10);
 export const SECRET = process.env.SECRET;
+export const EMAIL = process.env.EMAIL;
+export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;

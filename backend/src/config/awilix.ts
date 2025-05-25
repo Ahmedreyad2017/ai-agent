@@ -12,6 +12,7 @@ import {AuthController} from "../controllers/auth.controller";
 import {EmailService} from "../services/email.service";
 import nodemailer from "nodemailer";
 import authRouter from "../routes/auth.router";
+import {EMAIL, EMAIL_PASSWORD} from "../constants";
 
 
 const container = createContainer({
@@ -28,13 +29,11 @@ container.register({
     dialService: asClass(DialService).singleton(),
     authService: asClass(AuthService).singleton(),
     emailService: asFunction(async () => {
-        // const testAccount = await nodemailer.createTestAccount();
-        // console.log(testAccount)
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'ahmedreyad2017@gmail.com',
-                pass: 'vxnx vdlu aqgf txyk',
+                user: EMAIL,
+                pass: EMAIL_PASSWORD,
 
             },
         });
