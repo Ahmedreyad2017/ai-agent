@@ -1,0 +1,49 @@
+{
+  "type": "module",
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc && tsup",
+    "start:dev": "nodemon --watch src --ext ts --exec tsx src/index.ts",
+    "start:prod": "pm2 start dist/index.js --name backend --watch --restart-delay=5000"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.46",
+    "@types/sequelize": "^4.28.20",
+    "awilix": "^12.0.5",
+    "bcrypt": "^6.0.0",
+    "bullmq": "^5.53.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "ioredis": "^5.6.1",
+    "morgan": "~1.9.1",
+    "nodemailer": "^7.0.3",
+    "pm2": "^6.0.6",
+    "sequelize": "^6.37.7",
+    "sequelize-typescript": "^2.1.6",
+    "socket.io": "^4.8.1",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/express-session": "^1.18.1",
+    "@types/morgan": "^1.9.9",
+    "@types/nodemailer": "^6.4.17",
+    "@types/ws": "^8.18.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
