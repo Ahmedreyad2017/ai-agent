@@ -97,7 +97,7 @@ export class DialService {
             await this.update(dial);
 
             await emailService.sendEmail({
-                to: ["ahmedreyad2017@gmail.com"],
+                to: ["ahmedreyad2017@gmail.com","demo@plena.health"],
                 subject: 'Dial Completed',
                 html: `<p>Dial Completed with id: ${dial_id}</p>`,
             });
