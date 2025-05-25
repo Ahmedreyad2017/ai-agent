@@ -22,7 +22,7 @@ export const AuthHydration = () => {
             router.push('/login');
             return;
         }
-    }, [isAuthenticated]);
+    }, [initSocket, isAuthenticated, router, setAuthenticated]);
 
     return null;
 };

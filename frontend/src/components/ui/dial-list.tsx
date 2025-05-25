@@ -9,6 +9,7 @@ const DialList: FC = () => {
     const fetchDials = useDialStore(state => state.fetchDials);
     useEffect(() => {
         fetchDials();
+        // eslint-disable-next-line
     }, []);
     console.log(dials);
     const dataList = Object.values(dials);

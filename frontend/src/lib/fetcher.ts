@@ -11,8 +11,7 @@ export const fetcher = async <T>(endpoint: string, options?: RequestInit):Promis
         });
         const data= await res.json()
         return data as T;
-        //@ts-ignore
-    } catch (err: never) {
+    } catch (err) {
         console.log(err);
         return null;
     }

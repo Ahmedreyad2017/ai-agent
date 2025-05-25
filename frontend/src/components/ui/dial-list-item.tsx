@@ -1,7 +1,6 @@
 'use client'
 import React, {FC} from 'react';
 import {IDial} from '@/types/dial.interface';
-import Link from 'next/link';
 import {DialStatus} from "@/enums";
 import {useDialStore} from "@/stores/dial.store";
 
@@ -21,8 +20,6 @@ const DialListItem: FC<{ item: IDial }> = ({item}) => {
     const setSelectedDial = useDialStore(state => state.setSelectedDial)
 
     const {
-        recorder_url,
-        dial_id,
         dial_session_id,
         call_agent_id,
         status,
